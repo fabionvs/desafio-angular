@@ -37,4 +37,11 @@ describe('HeaderComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('button .viacredi')?.textContent).toContain('viacredi');
   });
+
+  it('should render header image', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('a .avatar img')?.textContent).toContain('viacredi');
+  });
 });
