@@ -34,7 +34,6 @@ export class AdmissaoComponent implements OnInit {
       return false;
     }
     this.associado = this.associadoService.getAssociado(this.cpfForm.value.cpf) as Associado;
-    console.log(this.associado)
     return true;
   }
 
