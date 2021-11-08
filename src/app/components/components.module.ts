@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { HeaderComponent } from './header/header.component';
+import {FooterComponent} from "./footer/footer.component";
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   exports: [
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class ComponentsModule { }

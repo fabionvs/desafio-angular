@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import {AppComponent} from "../../app.component";
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -21,5 +22,19 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render header title', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.jumbotron-heading')?.textContent).toContain('Nova Admissão Cooperado');
+  });
+
+  it('should render header subtitle', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('button .viacredi')?.textContent).toContain('viacredi');
   });
 });
