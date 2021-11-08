@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import {ComponentsModule} from "./components/components.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {AdmissaoComponent} from "./views/admissao/admissao.component";
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdmissaoComponent
+    AdmissaoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

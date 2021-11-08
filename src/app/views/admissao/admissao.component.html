@@ -26,4 +26,24 @@
       <h4 class="step-title">Admissão</h4>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12">
+      <h3>Informe o CPF do futuro cooperado(a):</h3>
+      <form [formGroup]="cpfForm" (submit)="onSubmit()">
+        <div class="col-6">
+          <label class="font-weight-bold">CPF</label>
+          <div class="input-group mb-3">
+            <input id="cpf" type="text" formControlName="cpf" class="form-control" [mask]="'000.000.000-00'">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">Consultar por CPF</button>
+            </div>
+          </div>
+          <div class="alert alert-danger" *ngIf="!this.cpfForm.valid && this.cpfForm.touched" role="alert">
+            Atenção! CPF inválido!
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
+
