@@ -4,7 +4,7 @@ Projeto criado com [Angular CLI](https://github.com/angular/angular-cli) versão
 
 ## Development server
 
-Rode `npm install` e `npm start` para rodar o servidor. Navegue para `http://localhost:4200/`. 
+Rode `npm install` e `npm start` para executar o servidor. Navegue para `http://localhost:4200/`. 
 
 ## Testes unitários
 
@@ -23,4 +23,4 @@ Como não há back-end, os dados foram "mockados" no associado.service.ts para u
 ]
 ```
 
-Utilize os CPF's dos dados acima para executar buscar o associado.
+Utilize os CPF's dos dados acima para buscar o associado.
